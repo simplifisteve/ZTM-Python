@@ -1,6 +1,7 @@
 from collections import Counter, defaultdict, OrderedDict
 import datetime
 import array
+import pdb
 
 print(datetime.datetime.now())
 
@@ -27,3 +28,6 @@ print(datetime.datetime.now())
 # Array of integers
 numbers = array.array('i', [1, 2, 3])
 print(numbers[1])
+
+# pdb is really to debug code, set breakpoints and step through code
+# pdb.set_trace()
