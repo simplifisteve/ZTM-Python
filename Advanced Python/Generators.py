@@ -52,14 +52,12 @@
 # for i in gen:
 #     print(i)
 
-def fib(number):  # Generator - Fib Sequence = memory efficient
+def fib(number):
     a = 0
     b = 1
     for i in range(number):
         yield a
-        temp = a  # placeholder for "a"
-        a = b  # move "a" up the sequence to continue function
-        b = temp + b  # generates new "b"
+        a, b = b, a + b
 
 
 for x in fib(100):
