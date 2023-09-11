@@ -29,5 +29,5 @@ print(datetime.datetime.now())
 numbers = array.array('i', [1, 2, 3])
 print(numbers[1])
 
-# pdb is really to debug code, set breakpoints and step through code
+# pdb is really useful to debug code, set breakpoints and step through code
 # pdb.set_trace()
