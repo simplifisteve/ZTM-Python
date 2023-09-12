@@ -14,5 +14,8 @@
   "markdown.preview.scrollEditorWithPreview": false,
   "markdown.preview.markEditorSelection": true,
   "rest-client.previewColumn": "beside",
-  "cody.inlineChat.enabled": false
+  "cody.inlineChat.enabled": false,
+  "cSpell.words": [
+    "Qoobee"
+  ]
 }
