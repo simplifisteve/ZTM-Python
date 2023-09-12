@@ -7,10 +7,12 @@
   "python.formatting.provider": "autopep8",
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
-  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreview": true,
   "comments.openView": "never",
-  "markdown.preview.doubleClickToSwitchToEditor": false,
-  "markdown.preview.openMarkdownLinks": "inEditor",
+  "markdown.preview.doubleClickToSwitchToEditor": true,
+  "markdown.preview.openMarkdownLinks": "inPreview",
   "markdown.preview.scrollEditorWithPreview": false,
-  "markdown.preview.markEditorSelection": false
+  "markdown.preview.markEditorSelection": true,
+  "rest-client.previewColumn": "beside",
+  "cody.inlineChat.enabled": false
 }

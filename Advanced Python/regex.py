@@ -20,18 +20,19 @@ import re
 # # https://regexone.com/ # Interactive tutorials
 
 # # Email Checker
-pattern = re.compile(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)")
-string = "qoobee@gmail.com"
+# pattern = re.compile(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)")
+# string = "qoobee@gmail.com"
 
-a = pattern.search(string)
-print(a)
+# a = pattern.search(string)
+# print(a)
 
 # # Password Checker
 pattern = pattern = re.compile(
-    r"^(?=.*[A-Za-z])(?=.*\d)(?=.*[$%#@])[A-Za-z\d$%#@]{8,}$")
-password = "aBc123$%@"
+    r"^(?=.*[A-Za-z])(?=.*\d)(?=.*[$%#@])[A-Za-z\d$%#@]{8,}\d$")
+# refactor code to make sure pattern ends with a number
+password = "SuperCuteQ$$beeaBc123$%@8"
 
-if pattern.match(password):
+if pattern.fullmatch(password):
     print("Password is valid")
 else:
     print("Invalid password")
