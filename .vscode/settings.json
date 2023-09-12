@@ -2,13 +2,15 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8"
   },
-<<<<<<< HEAD
-  "python.formatting.provider": "none",
-  "cSpell.words": [
-    "Dunder",
-    "Qoobee"
-  ]
-=======
-  "python.formatting.provider": "none"
->>>>>>> f8ee37e243db3f607bcbde25e0172e31ce1e53e0
+  // "python.formatting.provider": "none",
+  "editor.formatOnSave": true,
+  "python.formatting.provider": "autopep8",
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "workbench.editor.enablePreview": false,
+  "comments.openView": "never",
+  "markdown.preview.doubleClickToSwitchToEditor": false,
+  "markdown.preview.openMarkdownLinks": "inEditor",
+  "markdown.preview.scrollEditorWithPreview": false,
+  "markdown.preview.markEditorSelection": false
 }

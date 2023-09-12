@@ -25,3 +25,13 @@ string = "qoobee@gmail.com"
 
 a = pattern.search(string)
 print(a)
+
+# # Password Checker
+pattern = pattern = re.compile(
+    r"^(?=.*[A-Za-z])(?=.*\d)(?=.*[$%#@])[A-Za-z\d$%#@]{8,}$")
+password = "aBc123$%@"
+
+if pattern.match(password):
+    print("Password is valid")
+else:
+    print("Invalid password")
