@@ -29,7 +29,7 @@ for tweet in tweepy.Cursor(api.home_timeline).items():
         print('Retweeted the tweet')
         time.sleep(300)
     except tweepy.TweepyException as e:
-        print(e.reason)
+        print(e)
     time.sleep(5*60)
 
 # Favorite a tweet based on conditions
@@ -41,6 +41,6 @@ for tweet in tweepy.Cursor(api.search_tweets, q=search_string).items(numberOfTwe
         tweet.favorite()
         print('I like that tweet')
     except tweepy.TweepyException as e:
-        print(e.reason)
+        print(e)
     except StopIteration:
         break
