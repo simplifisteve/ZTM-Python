@@ -1,23 +1,23 @@
 import tweepy
 import time
 
-auth = tweepy.OAuthHandler('consumer_key', 'consumer_secret')
+auth = tweepy.OAuth1UserHandler('consumer_key', 'consumer_secret')
 auth.set_access_token('access_token', 'access_token_secret')
 
 api = tweepy.API(auth)
-user = api.me()
+user = api.get_user(screen_name='username')
 
 
 def limit_handler(cursor):
     try:
         while True:
             yield cursor.next()
-    except tweepy.RateLimitError:
+    except tweepy.TooManyRequests:
         time.sleep(300)
 
 
 # Generous Follower Bot
-for follower in limit_handler(tweepy.Cursor(api.followers).items()):
+for follower in limit_handler(tweepy.Cursor(api.get_followers).items()):
     if follower.name == 'example':  # or set follower.count > 1000 etc
         follower.follow()
         break
@@ -28,7 +28,7 @@ for tweet in tweepy.Cursor(api.home_timeline).items():
         tweet.retweet()
         print('Retweeted the tweet')
         time.sleep(300)
-    except tweepy.TweepError as e:
+    except tweepy.TweepyException as e:
         print(e.reason)
     time.sleep(5*60)
 
@@ -36,11 +36,11 @@ for tweet in tweepy.Cursor(api.home_timeline).items():
 search_string = 'python'
 numberOfTweets = 5
 
-for tweet in tweepy.Cursor(api.search, q=search_string).items(numberOfTweets):
+for tweet in tweepy.Cursor(api.search_tweets, q=search_string).items(numberOfTweets):
     try:
         tweet.favorite()
         print('I like that tweet')
-    except tweepy.TweepError as e:
+    except tweepy.TweepyException as e:
         print(e.reason)
     except StopIteration:
         break
