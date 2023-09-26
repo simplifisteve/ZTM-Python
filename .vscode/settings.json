@@ -5,6 +5,7 @@
   // "python.formatting.provider": "none",
   "editor.formatOnSave": true,
   "python.formatting.provider": "autopep8",
+  "python.formatting.autopep8Args": ["--indent-size=4", "--indent-style=tab"],
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
   "workbench.editor.enablePreview": true,
