@@ -2,6 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import pprint
 
+# This script only works for Hacker News. Modify parameters for other websites.
+
 urls = ['https://news.ycombinator.com/news?p=' + str(page) for page in range(1,5)]
 
 mega_links = []
